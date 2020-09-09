@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push | SDN</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bulma.min.css">
+    <link rel="stylesheet" href="./css/imagehover.css">
+    <link rel="stylesheet" href="./css/hover-min.css">
+</head>
+
+<body>
+    <div class="container" style="background-color:#ecf0f1; padding: 0;">
+        <!--NAVBAR-->
+        <div class="navbar-menu is-active" style="background-color: #ecf0f1;">
+            <div class="navbar-brand">
+                <a href="index.html"><img src="./images/logo.png" alt="" style="height: 125px;"
+                        class="hvr-float-shadow"></a>
+                <h1 class="navbar-item navbar-start" style="color:#2f3542"><strong>Electronics</strong></h1>
+            </div>
+            <div class="notification is-danger" style="text-align: center; margin: auto;">ESTE ES MI SEGUNDO WEBSITE.
+            </div>
+            <div class="navbar-end">
+                <a href="index.html" class="navbar-item hvr-wobble-horizontal"
+                    style="color: #2f3542; margin: auto;"><strong>Home</strong></a>
+                <a href="about.html" class="navbar-item hvr-wobble-horizontal"
+                    style="color: #2f3542; margin: auto;"><strong>About Us</strong></a>
+                <div class="navbar-item has-dropdown is-hoverable" style="margin: auto;">
+                    <a href="" class="navbar-link hvr-wobble-horizontal"
+                        style="color:#2f3542; margin: auto;"><strong>Contact</strong></a>
+                    <div class="navbar-dropdown" style="background-color:#ecf0f1 ;">
+                        <a href="https://www.instagram.com/stefadeninis/?hl=es-la" class="navbar-item"
+                            style="color:#2f3542">
+                            Instagram
+                        </a>
+                        <a href="https://www.facebook.com/stefa.rc.507" class="navbar-item" style="color: #2f3542">
+                            Facebook
+                        </a>
+                        <a href="https://twitter.com/stefadeninis" class="navbar-item" style="color:#2f3542">
+                            Twitter
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCGyONjeaEQmy5IKRryj_h1A" class="navbar-item"
+                            style="color:#2f3542">
+                            Youtube
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable" style="margin: auto;">
+                    <a href="" class="navbar-link hvr-wobble-horizontal" style="color:#2f3542"><strong>Notes and
+                            Docs</strong></a>
+                    <div class="navbar-dropdown" style="background-color: #ecf0f1;">
+                        <a href="pushpull.html" class="navbar-item" style="color:#2f3542">Amplificador Push-Pull</a>
+                        <a href="" class="navbar-item" style="color:#2f3542">Ley de Ohm</a>
+                        <a href="" class="navbar-item" style="color:#2f3542">Leyes de Kirchoff</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--pushpull-->
+        <div class="block">
+            <div class="hero is-info is-small" style="margin-bottom: 10px;">
+                <div class="hero-body">
+                    <div class="">
+                        <h1 class="title">Amplificador Push pull:</h1>
+                        <h1 class="subtitle">Pagina Nº2</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="box" style="background-color: #ecf0f1;">
+                    <div class="title is-5" style="color: #3298dc;">La distorsión por cruce
+                    </div>
+                    <p style="color: black;">La distorsión por cruce se puede apreciar mejor si reducimos la señal de
+                        entrada y además acoplamos el osciloscopio a la alterna para poder aumentar la sensibilidad. Al
+                        mismo tiempo y para entender porque se produce vamos a conectar el otro haz del osciloscopio en
+                        las bases de los transistores de salida.</p>
+                    <figure class="image">
+                        <img src="https://i.imgur.com/OnEpqNM.png" alt="Figura 4" style="height:auto; width:400px;margin: auto;">
+                        <h1 style="text-align: center;"><strong>Figura 4</strong></h1>
+                    </figure>
+                    <p style="color: black;">En verde se puede observar la señal en las base en tanto que en rojo se
+                        puede observar la señal de salida (emisores). Observe que el cursor de lectura rojo del
+                        osciloscopio se ajustó a un valor de tensión de entrada de unos 530 mV positivos y que recién en
+                        ese valor comienza a aparecer tensión en los emisores de la salida debido a la barrera base
+                        emisor del transistor Q1. Algo similar ocurre en el semiciclo negativo en donde el cursor de
+                        lectura azul se ajustó en el punto en que la tensión de las bases es -530 mV.</p>
+                    <p style="color: black;"><strong>(En síntesis podríamos decir que la distorsión por cruce se produce
+                            porque en cierto momento no conduce ni Q1 ni Q2.)</strong></p>
+                    <p style="color: black;">Y ese momento es precisamente cuando la señal de entrada pasa por cero.
+                        <strong style="color: red;">Esta es una falla de todos los amplificadores a transistores
+                            bipolares y se podría solucionar
+                            colocando una batería entre las bases en lugar de un puente.</strong> El oscilograma nos
+                        indica que si
+                        colocamos una batería de 530 + 537 mV entre las bases, apenas deja de conducir un transistor
+                        comienza a conducir el otro y desaparece la distorsión por cruce.</p>
+                    <figure class="image">
+                        <img src="https://i.imgur.com/WpxCUVY.png" alt="Figura 5" style="height:auto; width:500px;margin: auto;">
+                        <h1 style="text-align: center;"><strong>Figura 5</strong></h1>
+                    </figure>
+                    <p style="color: black;">En la <strong>figura 6</strong> se pueden observar los oscilogramas de base
+                        de Q1 y de emisores en donde la distorsión desapareció por completo.</p>
+                    <figure class="image">
+                        <img src="https://i.imgur.com/AlQIXW8.png" alt="Figura 6" style="height:auto; width:500px;margin: auto;">
+                        <h1 style="text-align: center;"><strong>Figura 6</strong></h1>
+                    </figure>
+                    <p style="color: black;">Sin embargo es evidente que se trata de una solución poco práctica por dos
+                        razones. La batería es
+                        un componente que debe reponerse y además la compensación es dependiente de la temperatura
+                        porque como ya sabemos las barreras de los transistores varía a razón de -2,5 mV/ºC. La solución
+                        debe ser práctica y debe estar compensada en temperatura. Existe mas de una solución pero la mas
+                        completa consta de un preset y un transistor BC548 conectado según el circuito de la <strong>figura 7</strong>.
+                    </p>
+                    <figure class="image">
+                        <img src="https://i.imgur.com/HbJpnVe.png" alt="Figura 7" style="height:auto; width:500px;margin: auto;">
+                        <h1 style="text-align: center;"><strong>Figura 7</strong></h1>
+                    </figure>
+                    <p style="color: black;">Revisando el oscilograma de salida y de base de Q1 encontramos que es igual
+                        al de la <strong>figura 7</strong>. Este circuito está además compensado en temperatura porque cuando baja la
+                        barrera de los transistores de salida también baja la barrera de Q4 y este conduce una mayor
+                        corriente de colector achicando la tensión entre las bases. Solo hay que tener la precaución de
+                        poner a Q4 en contacto térmico con el disipador de los transistores de salida para que los tres
+                        transistores estén a la misma temperatura.</p>
+
+                </div>
+            </div>
+            <div class="block">
+                <div class="box" style="background-color: #ecf0f1;">
+                    <div class="title is-5" style="color: #3298dc;">La Máxima Excursión de salida
+                    </div>
+                    <p style="color: black;">Para obtener el mejor rendimiento de un amplificador es necesario que pueda
+                        sacar una salida pico a pico igual a la tensión de fuente con la cual se alimenta. Pero ese es
+                        un máximo teórico inalcanzable. Si observamos el circuito básico de la <strong>fig. 5</strong> podremos notar que
+                        la salida podrá llegar hasta el valor de fuente. Solo podrá llegar hasta donde lo permita la
+                        resistencia interna del transistor.</p>
+                    <p style="color: black;">Cuando la salida llega al máximo circula la máxima corriente por la carga y
+                        se produce una caída de tensión en Q1 igual a la resistencia de saturación del transistor
+                        multiplicada por la corriente que circula. La tensión de fuente menos esa caída es el máximo
+                        valor al cual puede llegar la tensión de salida del amplificador.</p>
+                    <p style="color: black;">La salida mínima está aun en peor condición porque a la resistencia interna
+                        de Q2 se le suma otro problema. La base de Q2 solo puede llegar a cero volt cuando Q3 esta
+                        saturado y por lo tanto el emisor de Q2 quedará 600 mV por arriba de ese valor.</p>
+                    <p style="color: black;">Vamos a realizar ahora una simulación aumentando la señal de entrada para
+                        ver a que niveles reales llega la salida (máximo y mínimo) pero vamos a dejar el osciloscopio
+                        conectado también en la base de Q1 para entender cual es el problema que limita la tensión de
+                        salida.</p>
+                    <figure class="image">
+                        <img src="https://i.imgur.com/l05dVqr.png" alt="Figura 8" style="height:auto; width:650px;margin: auto;">
+                        <h1 style="text-align: center;"><strong>Figura 8</strong></h1>
+                    </figure>
+                    <p style="color: black;">Como podemos observar la tensión de salida en rojo llega hacia abajo hasta
+                        alrededor de 1V, que
+                        es el valor teorizado, pero hacia arriba no llega a superar los 9,5V (señal roja o gris oscura
+                        en ByN). Pero también observamos que la señal de base no supera los 10,2V y por lo tanto no se
+                        puede esperar que la de emisor crezca mas. El limite la base de Q1 podría llegar a 12V si la
+                        base del Q1 no tomara corriente. Pero la base de un transistor de potencia toma bastante
+                        corriente porque son transistores que difícilmente tengan un beta mayor a 30 y por lo tanto
+                        requieren una buena corriente de excitación.</p>
+                </div>
+                <!--pagination-->
+                <div class="block">
+                    <nav class="pagination" style="margin-left: 20px; margin-right: 20px;">
+                        <a href="pushpull.html" class="pagination-previous">Anterior</a>
+                        <a href="pushpull3.html" class="pagination-next">Siguiente Pagina</a>
+                        <ul class="pagination-list">
+                            <li>
+                                <a href="pushpull.html" class="pagination-link">1</a>
+                            </li>
+                            <li>
+                                <a href="pushpull2.html" class="pagination-link is-current">2</a>
+                            </li>
+                            <li>
+                                <a href="pushpull3.html" class="pagination-link">3</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!--footer-->
+                <div class="block">
+                    <footer class="footer" style="background-color: #ecf0f1;">
+                        <div class="content has-text-centered">
+                            <p>
+                                © Website created by <strong>Stefano De Ninis</strong> in september of 2020
+                            </p>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push | SDN</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bulma.min.css">
+    <link rel="stylesheet" href="./css/imagehover.css">
+    <link rel="stylesheet" href="./css/hover-min.css">
+</head>
+
+<body>
+    <div class="container" style="background-color:#ecf0f1; padding: 0;">
+        <!--NAVBAR-->
+        <div class="navbar-menu is-active" style="background-color: #ecf0f1;">
+            <div class="navbar-brand">
+                <a href="index.html"><img src="./images/logo.png" alt="" style="height: 125px;"
+                        class="hvr-float-shadow"></a>
+                <h1 class="navbar-item navbar-start" style="color:#2f3542"><strong>Electronics</strong></h1>
+            </div>
+            <div class="notification is-danger" style="text-align: center; margin: auto;">ESTE ES MI SEGUNDO WEBSITE.
+            </div>
+            <div class="navbar-end">
+                <a href="index.html" class="navbar-item hvr-wobble-horizontal"
+                    style="color: #2f3542; margin: auto;"><strong>Home</strong></a>
+                <a href="about.html" class="navbar-item hvr-wobble-horizontal"
+                    style="color: #2f3542; margin: auto;"><strong>About Us</strong></a>
+                <div class="navbar-item has-dropdown is-hoverable" style="margin: auto;">
+                    <a href="" class="navbar-link hvr-wobble-horizontal"
+                        style="color:#2f3542; margin: auto;"><strong>Contact</strong></a>
+                    <div class="navbar-dropdown" style="background-color:#ecf0f1 ;">
+                        <a href="https://www.instagram.com/stefadeninis/?hl=es-la" class="navbar-item"
+                            style="color:#2f3542">
+                            Instagram
+                        </a>
+                        <a href="https://www.facebook.com/stefa.rc.507" class="navbar-item" style="color: #2f3542">
+                            Facebook
+                        </a>
+                        <a href="https://twitter.com/stefadeninis" class="navbar-item" style="color:#2f3542">
+                            Twitter
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCGyONjeaEQmy5IKRryj_h1A" class="navbar-item"
+                            style="color:#2f3542">
+                            Youtube
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable" style="margin: auto;">
+                    <a href="" class="navbar-link hvr-wobble-horizontal" style="color:#2f3542"><strong>Notes and
+                            Docs</strong></a>
+                    <div class="navbar-dropdown" style="background-color: #ecf0f1;">
+                        <a href="pushpull.html" class="navbar-item" style="color:#2f3542">Amplificador Push-Pull</a>
+                        <a href="" class="navbar-item" style="color:#2f3542">Ley de Ohm</a>
+                        <a href="" class="navbar-item" style="color:#2f3542">Leyes de Kirchoff</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--pushpull-->
+        <div class="block">
+            <div class="hero is-info is-small" style="margin-bottom: 10px;">
+                <div class="hero-body">
+                    <div class="">
+                        <h1 class="title">Amplificador Push pull (Página Nº1):</h1>
+                        <h1 class="subtitle">Vamos a analizar los amplificadores de audio desde lo más simple a lo más
+                            complejo. El audio es un tema muy especial porque es el primer circuito complejo con el que
+                            suele experimentar un estudiante. Por complejo nos referimos a que tiene mas de 5
+                            transistores o un circuito integrado.
+
+                            Y lo mas simple que vamos a analizar en esta entrega es una etapa de salida push-pull
+                            (literalmente: tira y afloja) a transistores bipolares. Vamos a dejar de lado los
+                            amplificadores a transformador (técnicamente Clase A) porque ya no se utilizan en ningún
+                            equipo dado su bajo rendimiento.</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="box" style="background-color: #ecf0f1;">
+                    <div class="title is-5" style="color: #3298dc;">La generación de calor en los transistores de salida
+                    </div>
+                    <p style="color: black;">
+                        La potencia de la fuente de poder no se transforma solo en energía sonora; parte se transforma
+                        en
+                        calor.
+                        Los rendimientos clásicos de una etapa de salida están tan solo en el 60% aproximadamente. Esto
+                        no solo
+                        significa que la fuente debe entregar mas energía, sobre todo implica que los elementos que
+                        desperdician
+                        esa energía transformándola en calor son precisamente los más caros de un amplificador: los
+                        transistores
+                        de salida y que el único modo de protegerlos es montándolos sobre disipadores de aluminio que
+                        son caros
+                        y voluminosos.
+                        Pero para que un transistor se pueda montar sobre un disipador debe ser un transistor
+                        especial.Debe tener
+                        una superficie de montaje plana que haga un buen contacto mecánico con el disipador y entonces
+                        pasan a
+                        llamarse transistores de potencia. En la <strong>Figura 1</strong> se pueden observar los dos
+                        tipos más comunes
+                        de
+                        transistores de potencia que existen en el momento actual.</p>
+                    <figure class="image">
+                        <img src="https://i.imgur.com/3URoPpn.png" alt="Figura 1" style="height:250px; width:400px;margin: auto;">
+                        <h1 style="text-align: center;"><strong>Figura 1</strong></h1>
+                    </figure>
+                    <p style="color: black;">
+                        Observe que en ambos casos los transistores tienen una o dos perforaciones que permiten
+                        montarlos sobre
+                        un disipador de aluminio.
+                        La superficie de montaje suele estar conectada al colector (por lo menos en los dos tipos de
+                        encapsulados
+                        que mostramos) de modo que si el disipador está conectado a tierra, o vamos a usar el mismo
+                        disipador
+                        para montar dos componentes se debe realizar un montaje que los aísle electricamente y los
+                        acople
+                        térmicamente al disipador.
+                        Por lo general se utilizan aisladores de mica o de plástico conductor del calor y niples de
+                        plástico para los
+                        tornillos de modo que los colectores que están conectados a la carcasa en el TO3 o al terminal
+                        de montaje
+                        del TO220 queden eléctricamente aislados y disponibles para el circuito
+                    </p>
+                    <p style="color: black;"> <strong>Nota 1:</strong>
+                        la carcasa del encapsulado TO3 no posee pata de conexión por lo tanto la misma se debe
+                        efectuar a
+                        través de uno de los tornillos de anclaje o de un terminal semilla montado en la cabeza del
+                        tornillo y conectado con un cable.
+                    </p>
+                    <p style="color: black;"> <strong>Nota 2:</strong>
+                        ya sea que se use o no se use aislador de mica, o de plástico, para que el transistor este
+                        térmicamente conectado al disipador, se deba utilizar grasa siliconada entre las superficies de
+                        apoyo de los
+                        transistores y el disipador.
+
+                </div>
+            </div>
+            <div class="block">
+                <div class="box" style="background-color: #ecf0f1;">
+                    <div class="title is-5" style="color: #3298dc;">Circuito de la etapa de salida Push-Pull
+                    </div>
+                    <p>En la <strong>Figura 2</strong> mostramos el circuito más básico posible de una etapa de salida
+                        de audio con
+                        fuente positiva
+                        solamente conectada a un generador de funciones lista para excitar un parlante.</p>
+                    <figure class="image">
+                        <img src="https://i.imgur.com/gXHs8DT.png" alt="Figura 2" style="height:auto; width:500px;margin: auto;">
+                        <h1 style="text-align: center;"><strong>Figura 2</strong></h1>
+                    </figure>
+                    <p>Analizando el circuito se observa que consta de dos transistores de potencia complementarios: Q1
+                        que es un NPN y Q2 que es un PNP. Q1 se encarga de hacer circular corriente desde la fuente al
+                        parlante cargando además a C1 y Q2 se encarga de hacer circular corriente desde el parlante a
+                        masa descargando al capacitor C1.</p>
+                    <p>La palabra cargar y descargar es aquí prácticamente metafórica; porque realmente C1 se carga y
+                        descarga muy poco durante cada ciclo (la tensión sobre él prácticamente no varía) aun a la
+                        frecuencia mas baja que puede reproducir el circuito y que se estima en unos 25Hz. Pero el
+                        concepto debe quedar bien claro: C1 se carga desde la fuente y se descarga a masa aunque solo
+                        sea unos mV.</p>
+                    <p>El encargado de excitar a estos transistores es el llamado transistor driver Q3 (la traducción
+                        literal de driver es conductor o chofer, es decir el que maneja algo pero preferimos dejar el
+                        término en Ingles).</p>
+                    <p>En nuestro circuito inicial la fuente de polarización es el mismo generador de funciones, que
+                        tiene la posibilidad de variar tanto la alterna como la continua de salida. Para comenzar
+                        colocamos una señal muy pequeña de entrada (1 mV o menos) y medimos la tensión de salida
+                        ajustándola en 6V por modificación de la tensión de offset del generador.</p>
+                    <p>Luego podemos levantar la señal alterna lentamente y observar con un osciloscopio sobre la salida
+                        que la misma se genera sobre un eje de continua de 6V. Ver la <strong>figura 3</strong> en donde
+                        se puede
+                        observar que con 100 mV de señal de entrada se obtiene una señal de salida que oscila entre 2,68
+                        y 9,14V. es decir unos 3,2V de pico lo cual implica una ganancia de unas 32 veces en tensión.
+                        Pero lo mas importante es que la impedancia de salida del amplificador es suficientemente baja
+                        como para alimentar a un parlante de 8 Ohms.</p>
+                    <figure class="image">
+                        <img src="https://i.imgur.com/QsiPn3W.png" alt="Figura 3" style="height:auto; width:500px;margin: auto;">
+                        <h1 style="text-align: center;"><strong>Figura 3</strong></h1>
+                    </figure>
+                    <p>Aquí podemos observar que la señal de salida es aceptablemente senoidal sin embargo tiene una
+                        distorsión cerca del punto donde la salida se cruza con los 6V de polarización que vamos a
+                        analizar y corregir en el apartado siguiente.</p>
+                </div>
+                <!--pagination-->
+                <div class="block">
+                    <nav class="pagination" style="margin-left: 20px; margin-right: 20px;">
+                        <a href="" class="pagination-previous" disabled>Anterior</a>
+                        <a href="pushpull2.html" class="pagination-next">Siguiente Pagina</a>
+                        <ul class="pagination-list">
+                            <li>
+                                <a href="pushpull.html" class="pagination-link is-current">1</a>
+                            </li>
+                            <li>
+                                <a href="pushpull2.html" class="pagination-link">2</a>
+                            </li>
+                            <li>
+                                <a href="pushpull3.html" class="pagination-link">3</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!--footer-->
+                <div class="block">
+                    <footer class="footer" style="background-color: #ecf0f1;">
+                        <div class="content has-text-centered">
+                            <p>
+                                © Website created by <strong>Stefano De Ninis</strong> in september of 2020
+                            </p>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+</body>
+
+</html>

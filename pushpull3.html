@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push | SDN</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bulma.min.css">
+    <link rel="stylesheet" href="./css/imagehover.css">
+    <link rel="stylesheet" href="./css/hover-min.css">
+</head>
+
+<body>
+    <div class="container" style="background-color:#ecf0f1; padding: 0;">
+        <!--NAVBAR-->
+        <div class="navbar-menu is-active" style="background-color: #ecf0f1;">
+            <div class="navbar-brand">
+                <a href="index.html"><img src="./images/logo.png" alt="" style="height: 125px;"
+                        class="hvr-float-shadow"></a>
+                <h1 class="navbar-item navbar-start" style="color:#2f3542"><strong>Electronics</strong></h1>
+            </div>
+            <div class="notification is-danger" style="text-align: center; margin: auto;">ESTE ES MI SEGUNDO WEBSITE.
+            </div>
+            <div class="navbar-end">
+                <a href="index.html" class="navbar-item hvr-wobble-horizontal"
+                    style="color: #2f3542; margin: auto;"><strong>Home</strong></a>
+                <a href="about.html" class="navbar-item hvr-wobble-horizontal"
+                    style="color: #2f3542; margin: auto;"><strong>About Us</strong></a>
+                <div class="navbar-item has-dropdown is-hoverable" style="margin: auto;">
+                    <a href="" class="navbar-link hvr-wobble-horizontal"
+                        style="color:#2f3542; margin: auto;"><strong>Contact</strong></a>
+                    <div class="navbar-dropdown" style="background-color:#ecf0f1 ;">
+                        <a href="https://www.instagram.com/stefadeninis/?hl=es-la" class="navbar-item"
+                            style="color:#2f3542">
+                            Instagram
+                        </a>
+                        <a href="https://www.facebook.com/stefa.rc.507" class="navbar-item" style="color: #2f3542">
+                            Facebook
+                        </a>
+                        <a href="https://twitter.com/stefadeninis" class="navbar-item" style="color:#2f3542">
+                            Twitter
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCGyONjeaEQmy5IKRryj_h1A" class="navbar-item"
+                            style="color:#2f3542">
+                            Youtube
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable" style="margin: auto;">
+                    <a href="" class="navbar-link hvr-wobble-horizontal" style="color:#2f3542"><strong>Notes and
+                            Docs</strong></a>
+                    <div class="navbar-dropdown" style="background-color: #ecf0f1;">
+                        <a href="pushpull.html" class="navbar-item" style="color:#2f3542">Amplificador Push-Pull</a>
+                        <a href="" class="navbar-item" style="color:#2f3542">Ley de Ohm</a>
+                        <a href="" class="navbar-item" style="color:#2f3542">Leyes de Kirchoff</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--pushpull-->
+        <div class="block">
+            <div class="hero is-info is-small" style="margin-bottom: 10px;">
+                <div class="hero-body">
+                    <div class="">
+                        <h1 class="title">Amplificador Push pull:</h1>
+                        <h1 class="subtitle">Pagina Nº3</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="box" style="background-color: #ecf0f1;">
+                    <div class="title is-5" style="color: #3298dc;">El capacitor de bootstrap
+                    </div>
+                    <p style="color: black;">El circuito se completa con un resistor y un capacitor que tiene nombre
+                        propio: el capacitor de bootstrap (literalmente “atraparse los propios pies”). Apenas se conecta
+                        el circuito a la fuente, aun sin señal la tensión en la unión de los resistores de colector de
+                        Q3 se genera una tensión de 9V (6V en la pata inferior de R1, 12V en la pata superior de R4 y
+                        por lo tanto 9V en la unión de los resistores). El capacitor se carga con 3V porque la salida
+                        tiene 6V y el punto de unión de los resistores 9; y como es suficientemente grande para no
+                        descargarse en todo el ciclo de trabajo mantiene a la unión de los resistores en Vs+3 (tensión
+                        de salida mas 3 voltios). Cuando la tensión de salida es la máxima llega a los 15V y asegura la
+                        saturación de Q1.</p>
+                    <figure class="image">
+                        <img src="https://i.imgur.com/keArpjj.png" alt="Figura 9" style="height:auto; width:600px;margin: auto;">
+                        <h1 style="text-align: center;"><strong>Figura 9</strong></h1>
+                    </figure>
+                    <p style="color: black;">Como se puede observar ahora la tensión puede subir hasta prácticamente 12V
+                        y bajar hasta 1V, porque los dos resistores partidos de colector R1 y R4 y el capacitor de
+                        bostrap, generan una tensión en la unión de los resistores que tiene un pico máximo de unos 15V
+                        y por lo tanto Q1 se puede saturar sin inconvenientes. Note que al aumentar la tensión de fuente
+                        de R1 nos vimos obligados a bajar el valor de R2 para que el driver Q3 pudiera llegar a la
+                        saturación aumentando su corriente de base.</p>
+                    <p style="color: black;">En este punto parecería que el circuito ya está funcionando correctamente
+                        pero aun tiene varios problemas. El primero es que se polariza desde una fuente externa (el
+                        generador de funciones) y el segundo es que la señal parece bastante deformada. Inclusive hay un
+                        tercer problema que es la inestabilidad de la tensión de salida sin señal. La tensión de salida
+                        (6V en nuestro caso) no debe variar con la temperatura y nuestro circuito no tiene nada que la
+                        estabilice (y los transistores se calientan bastante mas que la temperatura ambiente).</p>
+                    <p style="color: black;">Todas estas calamidades se resuelven con un proceso llamado de
+                        realimentación negativa que requiere un estudio muy profundo porque se lo utiliza en incontables
+                        circuitos electrónicos y posee inclusive mas virtudes que las enumeradas.</p>
+
+                </div>
+            </div>
+            <div class="block">
+                <div class="box" style="background-color: #ecf0f1;">
+                    <div class="title is-5" style="color: #3298dc;">La realimentación negativa de CC y de CA
+                    </div>
+                    <p style="color: black;">La fuente de alimentación de la base de Q3 podría colgarse desde la fuente
+                        de 12V. Quizás serviría un simple resistor que ponga la salida en 6V. Pero también podría
+                        tomarse desde la salida misma si se tiene la precaución de filtrar la tensión alterna que esta
+                        tiene.</p>
+                    <p style="color: black;">Esto asegura la estabilidad de corriente continua del sistema contra
+                        variaciones de temperatura. En una palabra se forma lo que se llama un lazo de realimentación
+                        negativa. Imagínese que por cualquier razón, al calentar al dispositivo, la tensión continua de
+                        salida baje de 6 a 5 V. El resistor de polarización, al tener menos tensión hace circular menos
+                        corriente por la base del primer transistor. Esto implica menos corriente por el colector del
+                        mismo y por lo tanto una suba de la tensión de colector. Al subir la tensión de colector sube
+                        también la tensión de salida y compensa la reducción original.</p>
+                    <figure class="image">
+                        <img src="https://i.imgur.com/bT7uBV6.png" alt="Figura 10" style="height:auto; width:475px;margin: auto;">
+                        <h1 style="text-align: center;"><strong>Figura 10</strong></h1>
+                    </figure>
+                    <p style="color: black;">El ajuste de la tensión de salida en 6V se realizó aquí por modificación de
+                        la resistencia R5. Observe que primero se bajó la señal de entrada para que la tensión de salida
+                        sea prácticamente una continua. Si simplemente agregamos el resistor R5 el circuito tiene
+                        resuelto el problema de la estabilidad de CC pero sigue persistiendo la distorsión que marcamos
+                        en el circuito original.</p>
+                    <p style="color: black;">La distorsión se debe a la característica alineal de los transistores; el
+                        fabricante trata de fabricarlos lo mas lineales que pueda, pero hay consideraciones físicas
+                        imposible de salvar lo cual nos obliga a utilizar alguna solución similar a la utilizada para
+                        estabilizar el circuito contra las variaciones de temperatura. ¿Se puede diseñar una
+                        realimentación negativa que mejore la distorsión? Se puede y está agregada al circuito en
+                        paralelo con el resistor R5. Observe que se agregó R6, pero para no alterar la autopolarización
+                        con este agregado se colocó C4 que bloquea la CC de la salida, de modo que no pase por R6. Por
+                        R6 solo pasará la CA con destino a la base de Q3 y si lo analizamos con detalle estamos
+                        agregando una señal que se opone a la señal de entrada.</p>
+                    <p style="color: black;">En efecto cuando la señal de entrada sube, la señal de colector de Q1 baja
+                        y por lo tanto baja la salida. La salida se renvía a la entrada formándose un divisor de tensión
+                        entre R5 y R2 que a los efectos de la realimentación de CA es como si estuviera conectado a masa
+                        debido a que C3 tiene un valor de capacidad elevado y el generador tiene una resistencia interna
+                        casi nula. Una consecuencia de esta realimentación negativa es la reducción de sensibilidad del
+                        amplificador, pero el efecto de la realimentación reduce enormemente la distorsión como se puede
+                        observar en el oscilograma de la <strong>figura 11</strong>.</p>
+                    <figure class="image">
+                        <img src="https://i.imgur.com/SIXq2OR.png" alt="Figura 11" style="height: auto; width: 575px; margin: auto;">
+                        <h1 style="text-align: center;"><strong>Figura 11</strong></h1>
+                    </figure>
+                    <p style="color: black;">Aquí podemos observar que ahora debemos aumentar la señal de entrada de 60
+                        mV a 660 mV es decir casi 10 veces para compensar la realimentación negativa de R6. Pero la
+                        señal de salida es perfectamente sinusoidal (salvo los recortes de los picos que desaparecen si
+                        bajamos un poco la señal de entrada). La consecuencia (reducir la distorsión) es la buscada pero
+                        en realidad aun no sabemos porque se produce.
+                        Se produce por una sencilla razón. La señal de entrada colocada en el extremo izquierdo de R2 es
+                        perfectamente sinusoidal. La señal de salida colocada en el extremo derecho de R5 también sería
+                        sinusoidal si el amplificador fuera perfecto. En este caso en la base de Q3 tendríamos una resta
+                        de señales</p>
+                    <h1 class="title is-4" style="margin-top: ;"><strong>Vb = Ve - K . Vs</strong></h1>
+                    <p style="color: black;">en donde K representa el proceso de amplificación en los transistores y de
+                        atenuación en R5 y R2. La atenuación en R5 y R2 no tiene distorsiones pero la amplificación de
+                        los transistores si. En la práctica sabemos que el semiciclo negativo esta comprimido (ver el
+                        oscilograma 9). Esto significa que hay menos tensión de salida en el pico negativo que en el
+                        positivo y por lo tanto hay menos realimentación negativa y un aumento proporcionalmente mayor
+                        de este semiciclo que del positivo.</p>
+
+                </div>
+                <!--pagination-->
+                <div class="block">
+                    <nav class="pagination" style="margin-left: 20px; margin-right: 20px;">
+                        <a href="pushpull2.html" class="pagination-previous">Anterior</a>
+                        <a href="" class="pagination-next" disabled>Siguiente Pagina</a>
+                        <ul class="pagination-list">
+                            <li>
+                                <a href="pushpull.html" class="pagination-link">1</a>
+                            </li>
+                            <li>
+                                <a href="pushpull2.html" class="pagination-link ">2</a>
+                            </li>
+                            <li>
+                                <a href="pushpull3.html" class="pagination-link is-current">3</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!--footer-->
+                <div class="block">
+                    <footer class="footer" style="background-color: #ecf0f1;">
+                        <div class="content has-text-centered">
+                            <p>
+                                © Website created by <strong>Stefano De Ninis</strong> in september of 2020
+                            </p>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+</body>
+
+</html>
